@@ -19,7 +19,7 @@ u = np.sqrt(2) * X / wz
 v = np.sqrt(2) * Y / wz
 Z = (Amn * E0 * w0 * np.exp(u**2) * (-30240 * np.exp(-u**2) * u - 512 * np.exp(-u**2) * u**9 + 9216 * np.exp(-u**2) * u**7 - 48384 * np.exp(-u**2) * u**5 + 80640 * np.exp(-u**2) * u**3) * np.exp(v**2)
      * (-30240 * np.exp(-v**2) * v - 512 * np.exp(-v**2) * v**9 + 9216 * np.exp(-v**2) * v**7 - 48384 * np.exp(-v**2) * v**5 + 80640 * np.exp(-v**2) * v**3) * np.exp(-(X**2 + Y**2) / (wz**2)))**2
-#Z = (Amn * E0 * w0 * exp(u**2) * (-30240 * exp(-u**2) * u - 512 * exp(-u**2) * u**9 + 9216 * exp(-u**2) * u**7 - 48384 *   exp(-u**2) * u**5 + 80640 * exp(-u**2) * u**3) * exp(v**2) * (-30240 * exp(-v**2) * v - 512 * exp(-v**2) * v**9 + 9216 * exp(-v**2) * v**7 - 48384 * exp(-v**2) * v**5 + 80640 * exp(-v**2) * v**3) * exp(-(X**2 + Y**2) / (wz**2)))**2
+
 ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=plt.cm.hot)
 #ax.contourf(X, Y, Z, zdir='z', offset=-2, cmap=plt.cm.hot)
 ax.set_zlim(0, 800000000000)
